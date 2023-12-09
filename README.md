@@ -12,6 +12,12 @@ The Arduino microcontroller computes an appropriate adjustment for the LED's cur
 
 The feedback loop established from the LDR to the potentiometer ensures the continual adaptation of the LED's brightness to uphold the set level, even amidst external disruptions or fluctuations in the LED's characteristics. This closed-loop control system offers a dependable and efficient solution for overseeing the brightness of an LED lamp.
 
+# Electrical circuit Diagram
+
+![electrical diagram (1)](https://github.com/mfaizan44/Intelliglow/assets/117764288/b42531f1-0fbf-4611-a5a3-40cf3b1ec75c)
+
+
+
 # Decision Maker Code
 
 Here , python code is attached for the reference.(Intelliglow parsing.py)
