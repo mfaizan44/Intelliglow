@@ -22,6 +22,16 @@ The feedback loop established from the LDR to the potentiometer ensures the cont
 
 Here , python code is attached for the reference.(Intelliglow parsing.py)
 
+# Procedure to Run the program :
+  (1) Download the entire zip file from Github.
+  (2) Install any software that supports python files like Jupyter Notebook, Pycharm, VS Code.
+  (3) Connect the circuit either in a breadboard or PCB. Please make sure the connection is proper
+  (4) Connect the Arduino Uno tovthe circuit as well as connect it to the PC.
+  (5) Open the python file on that software : Intelliglow parsing.py
+  (6) Check which COM is the Arduino Uno is connected and alter the code accordingly. You can check it in Arduino IDE Application.
+  (7) Now run the code. For better result place the LED in a dark place or create a box model similar to a room.
+  
+
 # Demo Video : https://www.youtube.com/watch?v=0jZDAQ6jpHI
 
 
