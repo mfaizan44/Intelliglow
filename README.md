@@ -14,7 +14,7 @@ The feedback loop established from the LDR to the potentiometer ensures the cont
 
 # Decision Maker Code
 
-Here , python code is attached for the reference.
+Here , python code is attached for the reference.(Intelliglow parsing.py)
 
 # Demo Video : https://www.youtube.com/watch?v=0jZDAQ6jpHI
 
