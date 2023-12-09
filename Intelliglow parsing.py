@@ -1,16 +1,29 @@
+#Import necessary libraries
 import serial
 import time
 
+#Initialize variables
 LED_PIN = 11
 POTENTIOMETER_PIN = 'A1'
 LDR_PIN = 'A0'
 
 # Set up serial communication
-ser = serial.Serial('COM6', 9600)  # Change 'COM6' to the appropriate port
+ser = serial.Serial('COM6', 9600)  # Change 'COM6' to the appropriate port,this will help python to communicate to arduino uno.
 
 def setup():
     ser.write(b's')  # Send a signal to the Arduino to start setup
     time.sleep(2)    # Allow time for Arduino to initialize
+
+def parse_value(line):
+    # Assuming the line format is "Label: Value"
+    _, value_str = line.split(':')
+    return float(value_str.strip())
+
+def map_value(value, in_min, in_max, out_min, out_max):
+    return (value - in_min) * (out_max - out_min) // (in_max - in_min) + out_min
+
+def constrain(value, min_val, max_val):
+    return max(min(value, max_val), min_val)
 
 def loop():
     while True:
@@ -45,16 +58,6 @@ def loop():
         # Add a delay to avoid rapid changes
         time.sleep(0.1)
 
-def parse_value(line):
-    # Assuming the line format is "Label: Value"
-    _, value_str = line.split(':')
-    return float(value_str.strip())
-
-def map_value(value, in_min, in_max, out_min, out_max):
-    return (value - in_min) * (out_max - out_min) // (in_max - in_min) + out_min
-
-def constrain(value, min_val, max_val):
-    return max(min(value, max_val), min_val)
 
 if __name__ == "__main__":
     setup()
